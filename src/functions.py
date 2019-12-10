@@ -202,14 +202,8 @@ def tricky(list):
     :param list:
     :return: list completed by optional =
     """
-    count = len(list) % 4
-    if len(list) % 4 != 0:
-        if count > 0:
-            for i in range(count):
-                list.insert(len(list), "=")
-    
-
-    
+    while len(list) % 4 > 0:
+        list.append("=")
 
     return list
 
