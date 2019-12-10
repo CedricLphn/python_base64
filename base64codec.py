@@ -26,7 +26,7 @@ def main():
         else:
             print("Result: ", decode(args.s))
         if(args.out):
-            file = open(args.out, "w")
+            file = open(args.out, "w+")
             if(args.s):
                 file.write(decode(args.s))
             if(args.file):
@@ -34,21 +34,32 @@ def main():
                 file.write(decode(encoded_file.readline()))
             print("Successfull write to", args.out)
     elif(args.encode):
-        print("Encoding", args.s)
+        if(args.file):
+            file = open(args.file, "r")
+            string = file.readline()
+        else:
+            string = args.s
+        
+        run = res_list_to_string(
+            tricky(
+                convert_bits_to_int_to_char(
+                    convert_string_binary_to_list(
+                        convert_list_to_string(
+                            convert_list_to_binary(
+                                convert_list_to_int(
+                                    from_string_to_list(string))
+                                ))))))
+        if(args.out):
+            file = open(args.out, "w+")
+            file.write(run)
+            print("Successfull write in", args.out)
+        else:
+            print("Result: ", run)
+
+
     else:
         print("Nothing to do.")
 
-    input_test = "coucou"
-    run = res_list_to_string(
-                tricky(
-                    convert_bits_to_int_to_char(
-                        convert_string_binary_to_list(
-                            convert_list_to_string(
-                                convert_list_to_binary(
-                                    convert_list_to_int(
-                                        from_string_to_list(input_test)
-                                    )))))))
-    print(run)
 
 
 if __name__ == '__main__':
