@@ -16,7 +16,7 @@ def main():
     parser.add_argument("-s")
     args = parser.parse_args()
     if(args.decode):
-        print("Decoding", args.s)
+        print("Decoding", decode(args.s))
     elif(args.encode):
         print("Encoding", args.s)
     else:

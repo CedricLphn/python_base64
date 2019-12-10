@@ -36,3 +36,14 @@ def decimal_to_binary(d):
     while len(a) < 8:
         a = "0" + a
     return a
+
+def decode(string_to_decode):
+    """Decode to Base 64
+
+    Args:
+        string_to_decode: String to decode
+    Returns: 
+        Text decoded string
+    """
+
+    return chr(5)
