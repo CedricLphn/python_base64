@@ -22,6 +22,17 @@ def main():
     else:
         print("Nothing to do.")
 
+    input_test = "coucou"
+    run = res_list_to_string(
+                tricky(
+                    convert_bits_to_int_to_char(
+                        convert_string_binary_to_list(
+                            convert_list_to_string(
+                                convert_list_to_binary(
+                                    convert_list_to_int(
+                                        from_string_to_list(input_test)
+                                    )))))))
+    print(run)
 
 if __name__ == '__main__':
     main()
