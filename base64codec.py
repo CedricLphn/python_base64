@@ -14,10 +14,25 @@ def main():
     group.add_argument("-d", "--decode", action="store_true")
     group.add_argument("-e", "--encode", action="store_true")
     parser.add_argument("-s")
+    parser.add_argument("-file")
+    parser.add_argument("-out")
     args = parser.parse_args()
 
     if(args.decode):
-        print("Result: ", decode(args.s))
+        if(args.file):
+            print("Reading", args.file)
+            file = open(args.file, "r")
+            print("Result: ", decode(file.readline()))
+        else:
+            print("Result: ", decode(args.s))
+        if(args.out):
+            file = open(args.out, "w")
+            if(args.s):
+                file.write(decode(args.s))
+            if(args.file):
+                encoded_file = open(args.file, "r")
+                file.write(decode(encoded_file.readline()))
+            print("Successfull write to", args.out)
     elif(args.encode):
         print("Encoding", args.s)
     else:
