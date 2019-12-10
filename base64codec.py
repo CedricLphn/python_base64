@@ -22,6 +22,9 @@ def main():
     else:
         print("Nothing to do.")
 
+    test = "0100000101000010"
+    print(convert_string_binary_to_list(test))
+
 
 if __name__ == '__main__':
     main()
