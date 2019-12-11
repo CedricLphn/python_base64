@@ -31,6 +31,10 @@ Placez-vous au niveau du répertoire de la racine de l'application "python_base6
 
 **Dernière version :** 1.0
 
+## Board
+
+Nous utilisons Trello comme office de board.
+Le lien se trouve à cette adresse: https://trello.com/b/mPy2YfcV/python-base64
 
 ## Auteurs
 

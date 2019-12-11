@@ -31,7 +31,6 @@ def generate_b64_dic():
 
     return dic
 
-################################################ 1
 def from_string_to_list(str):
     """Convert string to list
     :arg: string
@@ -43,7 +42,6 @@ def from_string_to_list(str):
     return a
 
 
-################################################ 2
 def from_b64_index_to_decimal(i):
     """Convert b64 index to decimal
     :arg: index from b64 table
@@ -65,7 +63,6 @@ def convert_list_to_int(list):
     return modified
 
 
-################################################ 3
 def decimal_to_binary(d):
     """Convert decimal to binary
     :arg: decimal
@@ -146,7 +143,6 @@ def convert_list_to_binary(list):
         modified.append(item)
     return modified
 
-################################################ 4
 def convert_list_to_string(list):
     """Convert list to string
     :arg: list
@@ -155,7 +151,6 @@ def convert_list_to_string(list):
     return "".join(list)
 
 
-################################################ 5
 def convert_string_binary_to_list(str):
     """Convert string binary to list
     :arg: string
@@ -180,7 +175,7 @@ def convert_string_binary_to_list(str):
 
     return r
 
-################################################ 6-7
+
 def convert_bits_to_int_to_char(list):
     """Convert bits to index[i] of b64 table
     :param list:
@@ -196,9 +191,9 @@ def convert_bits_to_int_to_char(list):
 
     return new_dict
 
-################################################ 8
+
 def tricky(list):
-    """Trick to add =
+    """Add =
     :param list:
     :return: list completed by optional =
     """
@@ -207,7 +202,6 @@ def tricky(list):
 
     return list
 
-################################################ 9
 def res_list_to_string(list):
     """Final result list to string
     :param list:
